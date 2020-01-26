@@ -1,0 +1,17 @@
+TO IMPLEMENT QUEUE USING STACK
+Considering a queue q1 and two stacks s1 and s2.
+First to enqueue the value is pushed to s1.
+And to dequeue:
+->values from s1 in pushed to s2(considering both the stacks are not empty).
+->we have to pop the element from s2 and return it.
+By this way the new element is first displayed that is the concept of queue.
+APPLICATION OF QUEUES AND STACKS:
+QUEUES:
+->To handle interupts(like in call centers)
+->Used for disk and CPU scheduling
+->used to synchronise asynchronised data
+
+STACKS:
+->Infix to Postfix or Infix to Prefix Conversion 
+->Backtracking Procedure 
+->Call and return od functions
