@@ -1,0 +1,26 @@
+                     SEARCHING   DELETION    INSERTION
+LINKED LIST             O(n)        O(1)        O(1)
+QUEUE                   O(n)         O(1)       O(1)
+STACK                   O(n)        O(1)        O(1)
+TREE                    O(n)        O(n)        O(n)
+
+BFS in graphs:
+First mark all nodes as not visited.start from a node mark that node as visited and enqueue it in an empty queue.
+Move to the next node and enqueue it if it has not been visited already.
+The queue will give the output of BFS.
+DFS in queue:
+Start with a node and mark as visited and print it.Move to a node connected to the starting node and 
+so on using a recursive function and print the node and mark it as visited.
+this gives th output of DFS.
+
+TO FIND THE NUMBER OF COMPONENTS IN A GRAPH:
+Mak all the nodes as visited.Considering either BFS or DFS print the nodes and keep marking them
+as visited if not visited the recirsive function is to be called to perform the travesal.Increase the 
+count of the variable count initialsed to zero each time a node is being considered and traversed without 
+the recursive function being called.now,count gives the number of connected nodes in a graph.
+
+HEAPS:heaps are data structures which represent a complete binary tree.
+MIN HEAP:The root node must have the least value amongst the root node and its siblings.
+MAX HEAP:The root node must have the greates value compared to its siblings.
+
+
