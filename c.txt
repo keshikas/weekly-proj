@@ -1,0 +1,61 @@
+
+bool isFullTree (struct Node* root) 
+{ 
+    if (root == NULL) 
+        return true; 
+    if (root->left == NULL && root->right == NULL) 
+        return true; 
+    if ((root->left) && (root->right)) 
+        return (isFullTree(root->left) && isFullTree(root->right)); 
+    return false; 
+} 
+
+
+
+
+void printPostorder(struct node* node) 
+{ 
+     if (node == NULL) 
+        return; 
+     printPostorder(node->left); 
+     printPostorder(node->right); 
+     printf("%d ", node->data); 
+} 
+void printInorder(struct node* node) 
+{ 
+     if (node == NULL) 
+          return; 
+     printInorder(node->left); 
+     printf("%d ", node->data);   
+     printInorder(node->right); 
+} 
+void printPreorder(struct node* node) 
+{ 
+     if (node == NULL) 
+          return; 
+     printf("%d ", node->data);   
+     printPreorder(node->left);   
+     printPreorder(node->right); 
+}     
+
+void printLevelOrder(struct node* root) 
+{ 
+    int rear, front; 
+    struct node **queue = createQueue(&front, &rear); 
+    struct node *temp_node = root; 
+  
+    while (temp_node) 
+    { 
+        printf("%d ", temp_node->data); 
+        if (temp_node->left) 
+            enQueue(queue, &rear, temp_node->left); 
+        if (temp_node->right) 
+            enQueue(queue, &rear, temp_node->right); 
+        temp_node = deQueue(queue, &front); 
+    } 
+} 
+  
+  A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types:
+
+Max-Heap: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
+Min-Heap: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
